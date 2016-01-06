@@ -1,0 +1,38 @@
+.article-comments {
+  margin-top: 3em;
+  padding: 2em 0;
+  background: $container-dim;
+
+  h4 {
+    font-size: 1.8em;
+    color: #CECECE;
+    display: inline-block;
+    font-weight: 400;
+    margin-top: 30px;
+  }
+}
+.comment-editor {
+  resize: none;
+}
+
+.comment {
+  .avatar {
+    margin-right: 1.5em;
+  }
+  .commenter {
+    font-weight: 300;
+    font-size: 13px;
+    color: #585858;
+    text-decoration: none;
+  }
+  margin: 0;
+  padding: 0 3em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  list-style-type: none;
+  padding-top: 11px;
+  border-top: 1px solid #e1e1e1;
+  position: relative;
+  z-index: 0;
+}

@@ -1,0 +1,40 @@
+<% provide(:title, 'Articles') %>
+<div class="jumbotron light">
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Web Developer Blog</h1>
+    <p>Keep up-to-date on modern web and mobile development.</p>
+  </div>
+</div>
+<section class="articles-container">
+  <header>
+    <h2>Tutorials</h2>
+    <p>Learn how to be a modern web developer.</p>
+  </header>
+  <div class="article-cards container">
+    <% @articles.each do |article| %>
+    <div class="article-card">
+      <div class="card-body">
+      <h3><%= link_to  article.title, article_path(article.id, article.title) %></h3>
+      <p class="small author-meta">
+        By Carl Weis
+      </p>
+      <footer>
+        <div class="small meta">
+          <div class="article-stats">
+            <span><i class="fa fa-heart">&nbsp;</i> 52 </span>
+            <span><i class="fa fa-comment">&nbsp;</i> 5 </span>
+            <span class="published_ago"><%= time_ago_in_words(article.published_on) %></span>
+        </div>
+      </footer>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</section>
+<section class="projects-container">
+  <header class="project-header">
+    <h2>Projects</h2>
+    <p>Latest &amp; current projects I'm working on.</p>
+  </header>
+</section>

@@ -1,0 +1,20 @@
+<% provide(:title, 'Edit Article') %>
+<section id="edit-article">
+  <header>
+    <h1><%= @article.title %></h1>
+    <p>Edit this article using the markdown editor below.</p>
+  </header>
+
+<div class="container">
+  <div class="button-bar">
+  <%= link_to 'Destroy', article_path(@article),
+                         method: :delete, 
+                         data: {confirm: 'Are you sure?'},
+                         :class => 'btn btn-danger btn-sm pull-right'%>
+
+  <%= link_to 'Back', article_path(@article), 
+                      :class => 'btn btn-default'%>
+  </div>
+  <%= render 'form' %>
+</div>
+</section>

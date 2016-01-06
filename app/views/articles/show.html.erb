@@ -1,0 +1,27 @@
+<% provide(:title, @article.title) %>
+<section>
+  <header class="article-header container">
+    <div class="col-md-10 col-md-offset-1">
+      <h1><%= @article.title %></h1>
+      <p><%= @article.excerpt %></p>
+    </div>
+  </header>
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <article>
+        <%= @article.content_html.html_safe %>
+      </article>
+    </div>
+  </div>
+  <section class="article-comments">
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="comments">
+          <%= render 'comments/form' %>
+          <%= render @article.comments %>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</section>

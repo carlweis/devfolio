@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for @article do |f| %>
+    <%= render 'form_errors' %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :excerpt %>
+      <%= f.text_area :excerpt, :class => 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :content_markdown %>
+      <%= f.text_area :content_markdown, :class => 'form-control', :id => 'markdown-editor', :rows => 10 %>
+    </div>
+    <div class="checkbox">
+      <label>
+        <%= f.check_box :published %> Published
+      </label>
+    </div>
+    <div class="form-group">
+      <%= f.submit 'Save', :class => 'btn btn-success btn-block' %>
+    </div>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <h4>Article Preview</h4>
+    <div id="markdown-preview">
+      
+    </div>
+  </div>
+</div>

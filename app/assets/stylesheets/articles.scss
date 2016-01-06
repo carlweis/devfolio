@@ -1,0 +1,112 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.manage-links {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.775em;
+}
+#articles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-bottom: 3em;
+  }
+}
+.article-header {
+  text-align: left;
+  p {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.jumbotron.articles {
+  background-color: $brand-primary;
+  
+  text-align: center;
+  position: relative;
+  padding: 60px 0;
+  div.sub-caption {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+  }
+  p {
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 100;
+  }
+}
+.meta,
+.author-meta {
+  color: #a2a2a2;
+}
+.projects-container {
+  background-color: $container-dim;
+  
+}
+.articles-container {
+  
+  padding: 3em;
+  background-color: $container-dim;
+  div.article-card {
+    
+    @extend .col-md-3;
+    padding: 1em;
+    div.card-body {
+      @extend .panel;
+      padding: 0 1.75em 1em 1.75em;
+      background-color: #fff;
+    }
+    footer {
+      border-top: solid 1px #eee;
+      margin: 0;
+      padding: 1em 0;
+      span {
+        @extend .pull-left;
+        margin-right: 1em;
+        &.published_ago {
+          @extend .pull-right;
+        }
+      }
+      p {
+
+      }
+    }
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    a  {
+      color: #222;
+      &:hover {
+        color: $brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+  // h2 > a {
+  //   color: #222;
+  //   &:hover {
+  //     color: $brand-primary;
+  //   }
+  // }
+  .article-excerpt {
+    padding: 1em 0;
+    font-size: 1.25em;
+  }
+}
+.errors {
+  color: $alert-danger-text;
+}

@@ -1,0 +1,19 @@
+<% if comment.body %>
+<div class="comment">
+  <div class="avatar pull-left">
+    <%= image_tag avatar_url(comment.email) %>
+  </div>
+  <p class="commenter">
+    <%= comment.name %>
+    <span class="rating pull-right"><%= comment.rating %> &nbsp;<i class="fa fa-star">&nbsp;</i></span>
+  </p>
+  <p class="comment-body">
+    <%= comment.body %>
+  </p>
+  <p class="">
+      <%= link_to 'Delete Comment', [comment.article, comment],
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+    </p>
+</div>
+<% end %>

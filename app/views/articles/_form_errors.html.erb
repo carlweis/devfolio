@@ -1,0 +1,13 @@
+<% if @article.errors.any? %>
+<div id="error_explanation">
+  <div class="alert alert-danger text-center">
+    <%= pluralize(@article.errors.count, "error") %> prohibited
+    this article from being saved:
+  </div>
+  <ul class="errors">
+    <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
