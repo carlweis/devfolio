@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with name: "codedevise", password: "!Zeke092600", except: [:index, :show]
 
   def index
     @articles = Article.where(:published => true)
